@@ -1,0 +1,110 @@
+ @mixin navBtn($bg){
+  width: 48px;
+  height: 48px;
+  background: $bg center/cover no-repeat;
+}
+.leads {
+  position: relative;
+  margin: -48px 0 0;
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%) top left/100% 586px no-repeat,
+  linear-gradient(to bottom, #191919 0%, #191919 100%) bottom;
+  padding-bottom: 160px;
+
+  .stat {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 167px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 525px;
+    margin: 0 auto 100px;
+  }
+
+  .owl-carousel {
+    margin-bottom: 97px;
+
+    .owl-stage-outer {
+      padding-top: 20px;
+    }
+
+    .owl-item {
+      height: 390px;
+      transition: 0.5s;
+
+      .box {
+        height: 100%;
+
+
+        &__img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &.center {
+        position: relative;
+        margin-top: -20px;
+        height: 430px;
+      }
+    }
+
+    .leadsNav {
+      margin-top: 92px;
+      display: flex;
+      justify-content: center;
+
+      &.disabled {
+        display: none;
+      }
+
+      .prevBtn {
+        margin-right: 32px;
+        @include navBtn(url('../img/leads/strelka.png'));
+      }
+
+      .nextBtn{
+         @include navBtn(url('../img/leads/strelka.png'));
+      }
+
+     
+    }
+  }
+
+  .featured {
+    text-align: center;
+
+    &__title {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0.559642px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 42px;
+    }
+
+    &__img {
+      margin-right: 17px;
+
+      &:first-child {
+        margin-right: 40px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
